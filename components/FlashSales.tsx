@@ -2,8 +2,9 @@ import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
 import { Timer } from "./Timer";
 import ProductCard from "@/components/ProductCard";
-import img from "@/public/images/g92-2-500x500 1.png";
+import img from "@/public/images/gaming.png";
 import ViewAllButton from "./ViewAllButton";
+import { products } from "@/data/products";
 
 export default function FlashSales() {
   return (
@@ -54,60 +55,19 @@ export default function FlashSales() {
 
       <div className="pl-20 py-5 overflow-hidden">
         <div className="flex gap-5 overflow-x-scroll hide-scrollbar">
-          <ProductCard
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            discountPercent={-33}
-          />
-          <ProductCard
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            discountPercent={33}
-          />
-          <ProductCard
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            discountPercent={33}
-          />
-          <ProductCard
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            discountPercent={33}
-          />
-          <ProductCard
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            discountPercent={33}
-          />
-          <ProductCard
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            discountPercent={33}
-          />
+          {products.map((product) => (
+            <ProductCard
+              key={product.productName}
+              productName={product.productName}
+              rating={product.rating}
+              imgUrl={product.imgUrl}
+              currentPrice={product.currentPrice}
+              originalPrice={product.originalPrice}
+              reviewCount={product.reviewCount}
+              discountPercent={product.discountPercent}
+              new={product.new}
+            />
+          ))}
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
 import { Timer } from "./Timer";
 import ProductCardResponsive from "@/components/ProductCardResponsive";
-import img from "@/public/images/g92-2-500x500 1.png";
+import img from "@/public/images/gaming.png";
 import ViewAllButton from "./ViewAllButton";
 import CustomRadioGroup from "./CustomRadioGroup";
 

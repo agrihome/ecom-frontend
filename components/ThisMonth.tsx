@@ -1,9 +1,8 @@
 import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
-import { Timer } from "./Timer";
 import ProductCardResponsive from "@/components/ProductCardResponsive";
-import img from "@/public/images/g92-2-500x500 1.png";
 import ViewAllButton from "./ViewAllButton";
+import {products} from "@/data/products";
 
 export default function ThisMonth() {
   return (
@@ -20,39 +19,20 @@ export default function ThisMonth() {
 
       <div className="px-20 py-5 overflow-hidden p-5">
         <div className="grid grid-cols-4 gap-6">
+         {
+         products.slice(4,8).map((product,index) => (
           <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
+            key={index}
+            productName={product.productName}
+            rating={product.rating}
+            imgUrl={product.imgUrl}
+            currentPrice={product.currentPrice}
+            originalPrice={product.originalPrice}
+            reviewCount={product.reviewCount}
           />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-        </div>
+         ))
+         }
+         </div>
       </div>
     </section>
   );
