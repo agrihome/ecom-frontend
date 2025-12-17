@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-import  Hero  from "@/components/Hero";
+import Hero from "@/components/Hero";
 import FlashSales from "@/components/FlashSales";
 import ThisMonth from "@/components/ThisMonth";
 import ExploreOurProducts from "@/components/ExploreOurProducts";
 import Footer from "@/components/Footer";
+import Service from "@/components/Service";
+import GridImg from "@/components/GridImg";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
       <FlashSales></FlashSales>
       <ThisMonth></ThisMonth>
       <ExploreOurProducts></ExploreOurProducts>
+      <GridImg></GridImg>
+      <Service></Service>
       <Footer></Footer>
     </main>
   );
