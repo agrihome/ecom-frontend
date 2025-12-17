@@ -1,6 +1,6 @@
 export default function Service() {
     return (
-        <section className="mx-20 flex justify-center  items-center gap-20 py-20">
+        <section className="mx-20 flex justify-center  items-center gap-20 my-30">
             <div className="flex flex-col justify-center items-center gap-2">
                 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.3" d="M80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40ZM10.9071 40C10.9071 56.0675 23.9325 69.0929 40 69.0929C56.0675 69.0929 69.0929 56.0675 69.0929 40C69.0929 23.9325 56.0675 10.9071 40 10.9071C23.9325 10.9071 10.9071 23.9325 10.9071 40Z" fill="#2F2E30" />
@@ -50,7 +50,7 @@ export default function Service() {
                     <path d="M44.4039 34.77C44.692 34.4822 45.1755 34.482 45.4635 34.77C45.7514 35.058 45.7513 35.5415 45.4635 35.8296L38.2965 42.9966C38.1452 43.1478 37.9574 43.2163 37.7662 43.2163C37.5752 43.2162 37.3881 43.1477 37.2369 42.9966L34.5533 40.313C34.2655 40.0249 34.2654 39.5414 34.5533 39.2534C34.8414 38.9654 35.3248 38.9655 35.6129 39.2534L37.7662 41.4067L38.1207 41.0532L44.4039 34.77Z" fill="#FAFAFA" stroke="#FAFAFA" />
                 </svg>
                 <p className="text-xl font-semibold mt-4">MONEY BACK GUARANTEE</p>
-                <p className="text-sm">We reurn money within 30 days</p>
+                <p className="text-sm">We return money within 30 days</p>
             </div>
         </section>
     );

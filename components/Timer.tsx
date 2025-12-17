@@ -7,6 +7,7 @@ interface TimerProps {
   hours?: number;
   minutes?: number;
   seconds?: number;
+  color?: string;
 }
 
 export function Timer({
@@ -14,6 +15,7 @@ export function Timer({
   hours = 23,
   minutes = 19,
   seconds = 56,
+  color = "black"
 }: TimerProps) {
   const [time, setTime] = useState({
     days: days ?? 0,
@@ -67,7 +69,7 @@ export function Timer({
   };
 
   return (
-    <div className="flex items-end gap-2">
+    <div className="flex items-end gap-2" style={{ color }}>
       <div className="flex flex-col items-start">
         <span className="text-xs text-gray-500">Days</span>
         <span className="text-2xl font-bold">{formatTime(time.days)}</span>

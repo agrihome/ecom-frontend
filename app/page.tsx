@@ -8,6 +8,7 @@ import ExploreOurProducts from "@/components/ExploreOurProducts";
 import Footer from "@/components/Footer";
 import Service from "@/components/Service";
 import GridImg from "@/components/GridImg";
+import JBL from "@/components/jbl";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero></Hero>
       <FlashSales></FlashSales>
       <ThisMonth></ThisMonth>
+      <JBL></JBL>
       <ExploreOurProducts></ExploreOurProducts>
       <GridImg></GridImg>
       <Service></Service>

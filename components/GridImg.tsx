@@ -27,11 +27,11 @@ export default function GridImg() {
                     </div>
                 </div>
 
-                <div className="col-span-2 row-span-1 flex items-bottom bg-black overflow-hidden">
+                <div className="col-span-2 row-span-1 flex items-bottom bg-black overflow-hidden relative">
                     <Image src={women} alt="women" className="object-fill w-2/3 h-auto scale-x-[-1] ml-auto" />
-                    <div className="absolute bottom-10 left-10 text-white flex flex-col gap-2">
-                        <h2 className="text-2xl font-semibold">Perfume</h2>
-                        <p className="text-sm font-normal">GUCCI INTENSE OUD EDP</p>
+                    <div className="absolute bottom-10 left-10 text-white flex flex-col gap-3 w-5/12">
+                        <h2 className="text-2xl font-semibold">Women’s Collections</h2>
+                        <p className="text-sm font-normal">Featured woman collections that give you another vibe.</p>
                         <button className="font-medium underline underline-offset-6 mr-auto">Shop Now</button>
                     </div>
                 </div>
