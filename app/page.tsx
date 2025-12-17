@@ -5,10 +5,11 @@ import  Hero  from "@/components/Hero";
 import FlashSales from "@/components/FlashSales";
 import ThisMonth from "@/components/ThisMonth";
 import ExploreOurProducts from "@/components/ExploreOurProducts";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-white text-black pb-2">
+    <main className="bg-white text-black">
       <div className="text-center bg-black py-3 text-sm text-white">
         Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
         <Link
@@ -23,6 +24,7 @@ export default function Home() {
       <FlashSales></FlashSales>
       <ThisMonth></ThisMonth>
       <ExploreOurProducts></ExploreOurProducts>
+      <Footer></Footer>
     </main>
   );
 }
