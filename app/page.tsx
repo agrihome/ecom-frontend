@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Service from "@/components/Service";
 import GridImg from "@/components/GridImg";
 import JBL from "@/components/jbl";
+import Browse from "@/components/Browse"
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Header></Header>
       <Hero></Hero>
       <FlashSales></FlashSales>
+      <Browse></Browse>
       <ThisMonth></ThisMonth>
       <JBL></JBL>
       <ExploreOurProducts></ExploreOurProducts>

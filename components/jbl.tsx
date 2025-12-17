@@ -16,7 +16,7 @@ export default function JBL() {
                 </div>
 
                 <div className="col-span-1  bg-radial from-gray-800/70 from-40% to-black">
-                    <Image src={jbl} alt="jbl" className="transform translate-x-[-5%] scale-x-[-1]" />
+                    <Image src={jbl} alt="jbl" className="transform translate-x-[-5%] scale-x-[-1] object-cover w-full h-auto" />
                 </div>
             </div>
         </section>
