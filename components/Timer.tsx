@@ -72,22 +72,22 @@ export function Timer({
     <div className="flex items-end gap-2" style={{ color }}>
       <div className="flex flex-col items-start">
         <span className="text-xs text-gray-500">Days</span>
-        <span className="font-bold">{formatTime(time.days)}</span>
+        <span className="lg:text-2xl font-bold">{formatTime(time.days)}</span>
       </div>
       <span className="text-2xl font-bold text-[#DB4444] mb-1">:</span>
       <div className="flex flex-col items-start">
         <span className="text-xs text-gray-500">Hours</span>
-        <span className="font-bold">{formatTime(time.hours)}</span>
+        <span className="lg:text-2xl font-bold">{formatTime(time.hours)}</span>
       </div>
       <span className="text-2xl font-bold text-[#DB4444] mb-1">:</span>
       <div className="flex flex-col items-start">
         <span className="text-xs text-gray-500">Minutes</span>
-        <span className="font-bold">{formatTime(time.minutes)}</span>
+        <span className="lg:text-2xl font-bold">{formatTime(time.minutes)}</span>
       </div>
       <span className="text-2xl font-bold text-[#DB4444] mb-1">:</span>
       <div className="flex flex-col items-start">
         <span className="text-xs text-gray-500">Seconds</span>
-        <span className="font-bold">{formatTime(time.seconds)}</span>
+        <span className="lg:text-2xl font-bold">{formatTime(time.seconds)}</span>
       </div>
     </div>
   );

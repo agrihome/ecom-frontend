@@ -6,7 +6,7 @@ export default function Header() {
     <header className="w-full bg-white pt-10 pb-4 px-5 sm:px-20">
       <nav className="w-full">
         <div className="flex items-center w-full [@media(min-width:1250px)]:gap-32">
-          <div className="text-2xl font-bold">
+          <div className="text-2xl font-bold text-black">
             <Link href="/">Exclusive</Link>
           </div>
           <div className="flex items-center space-x-6 text-gray-700 [@media(max-width:1250px)]:ml-6">
@@ -28,7 +28,7 @@ export default function Header() {
             <div className="bg-[#F5F5F5] h-[38px] w-[250px] outline-none lg:flex items-center px-3 justify-between gap-1 hidden">
               <input
                 type="text"
-                className="h-[22px] text-sm outline-none flex-1"
+                className="h-[22px] text-sm outline-none flex-1 placeholder:text-gray-500 text-gray-700"
                 placeholder="What are you looking for?"
               />
               <svg

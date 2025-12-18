@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Link from "next/link";
+import Footer from "@/components/Footer";
+
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -20,8 +24,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-sans antialiased`}>
-        {children}
+      <body className={`${poppins.variable} font-sans antialiased text-black bg-white`}>
+          <div className="text-center bg-black py-3 text-sm text-white">
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+                <Link
+                  href="/shop"
+                  className="font-extrabold ml-4 underline cursor-pointer"
+                >
+                  ShopNow
+                </Link>
+              </div>
+          <Header></Header>
+            {children}
+          <Footer></Footer>
+
+
       </body>
     </html>
   );
