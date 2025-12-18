@@ -4,10 +4,16 @@ import monitor from "@/public/images/monitor.png"
 import shoes from "@/public/images/shoes.png"
 import chair from "@/public/images/chair.png"
 import jacketPink from "@/public/images/jacket-pink.png"
-import jacketGreen from "@/public/images/jacket-Green.png"
+import jacketGreen from "@/public/images/jacket-green.png"
 import handbagModern from "@/public/images/handbag-modern.png"
 import bookShelf from "@/public/images/book-shelf.png"
 import rgbSpeaker from "@/public/images/rgb-speaker.png"
+import cesar from "@/public/images/cesar.png"
+import camera from "@/public/images/camera.png"
+import laptop from "@/public/images/laptop.png"
+import creame from "@/public/images/creame.png"
+import benz from "@/public/images/benz.png"
+import gaming2 from "@/public/images/gaming2.png"
 
 interface Product {
   productName: string;
@@ -52,7 +58,7 @@ export const products: Product[] = [
         discountPercent: 30,
         new: false
     },
-      {
+    {
         productName: "S-Series Comfort Chair",
         rating: 4.5,
         imgUrl: chair,
@@ -101,7 +107,55 @@ export const products: Product[] = [
         reviewCount: 65,
         discountPercent: 10,
         new: false
+    },
+    {
+        productName: "CANON EOS DSLR Camera",
+        rating: 4,
+        imgUrl: camera,
+        currentPrice: 360,
+        originalPrice: 400,
+        reviewCount: 95,
+        discountPercent: 10,
+        new: false
+    },
+    {
+        productName: "ASUS FHD Gaming Laptop",
+        rating: 5,
+        imgUrl: laptop,
+        currentPrice: 700,
+        originalPrice: 800,
+        reviewCount: 325,
+        discountPercent: 20,
+        new: false
+    },
+    {
+        productName: "Kids Electric Car",
+        rating: 5,
+        imgUrl: benz,
+        currentPrice: 960,
+        originalPrice: 1160,
+        reviewCount: 65,
+        discountPercent: 65,
+        new: true  
+    },
+    {
+        productName: "Jr. Zoom Soccer Cleats",
+        rating: 4.5,
+        imgUrl: shoes,
+        currentPrice: 1160,
+        originalPrice: 1260,
+        reviewCount: 85,
+        discountPercent: 10,
+        new: false
+    },
+     {
+        productName: "Quilted Satin Jacket",
+        rating: 4.5,
+        imgUrl: jacketGreen,
+        currentPrice: 200,
+        originalPrice: 250,
+        reviewCount: 95,
+        discountPercent: 20,
+        new: false
     }
-
-  
 ]

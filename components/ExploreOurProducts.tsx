@@ -4,7 +4,7 @@ import { Timer } from "./Timer";
 import ProductCardResponsive from "@/components/ProductCardResponsive";
 import img from "@/public/images/gaming.png";
 import ViewAllButton from "./ViewAllButton";
-import CustomRadioGroup from "./CustomRadioGroup";
+import { products } from "@/data/products";
 
 export default function ExploreOurProducts() {
   return (
@@ -20,74 +20,19 @@ export default function ExploreOurProducts() {
       </div>
       <div className="px-20 py-5 overflow-hidden p-5">
         <div className="grid grid-cols-4 grid-rows-2 gap-6 gap-y-16">
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            new={true}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-            new={true}
-            discountPercent={33}
-          />
-          <ProductCardResponsive
-            productName="HAVIT HV-G92 Gamepad"
-            rating={5}
-            imgUrl={img}
-            currentPrice={160}
-            originalPrice={120}
-            reviewCount={88}
-          />
+          {products.slice(5,13).map((product) => (
+            <ProductCardResponsive
+              key={product.productName}
+              productName={product.productName}
+              rating={product.rating}
+              imgUrl={product.imgUrl}
+              currentPrice={product.currentPrice}
+              originalPrice={product.originalPrice}
+              reviewCount={product.reviewCount}
+              discountPercent={product.discountPercent}
+              new={product.new}
+            />
+          ))}
         </div>
       </div>
       <div className="flex justify-center my-12">
