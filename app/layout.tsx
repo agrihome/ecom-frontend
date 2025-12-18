@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import StoreProvider from "@/lib/redux/StoreProvider";
+import ClientLayout from "@/components/ClientLayout";
 
 
 const poppins = Poppins({
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} font-sans antialiased text-black bg-white`}>
-        <StoreProvider>
+        <ClientLayout>
           <div className="text-center bg-black py-3 text-sm text-white">
                 Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
                 <Link
@@ -39,7 +39,7 @@ export default function RootLayout({
           <Header></Header>
             {children}
           <Footer></Footer>
-        </StoreProvider>
+        </ClientLayout>
       </body>
     </html>
   );
