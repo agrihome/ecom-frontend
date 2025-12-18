@@ -24,11 +24,11 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <div className="relative w-max group">
-      <div className="bg-[#F5F5F5] w-[270px] h-[250px] flex items-center justify-center rounded-md">
+      <div className="bg-[#F5F5F5] w-[180px] h-[166px] lg:w-[270px] lg:h-[250px] flex items-center justify-center rounded-md">
         <Image
           src={imgUrl}
           alt={productName}
-          className="object-cover w-[172px] h-auto"
+          className="object-cover lg:w-[172px] w-[114px] h-auto"
         />
       </div>
       <div className="flex flex-col gap-1 mt-8">

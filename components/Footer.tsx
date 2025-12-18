@@ -2,21 +2,21 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="w-full px-20 h-[440px] bg-black text-white flex flex-col items-center justify-center gap-16" >
-            <section className="grid grid-cols-5 gap-8 text-base font-normal max-w-9xl">
+        <footer className="w-full px-5 sm:px-20 min-h-[440px] bg-black text-white flex flex-col sm:items-center sm:justify-center gap-16" >
+            <section className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 text-base font-normal max-w-9xl pt-10 lg:pt-0">
                 <div className="flex flex-col gap-4">
                     <h2 className="text-2xl font-semibold">Exclusive</h2>
                     <p className="text-xl font-medium">Subscribe</p>
                     <p>Get 10% off your first order</p>
-                    <form className="border-[0.2px] border-white flex gap-2 w-max py-2 px-2 rounded-md">
-                        <input type="text" placeholder="Enter Your Email" className="focus:outline-none" />
-                        <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <form className="border-[0.2px] border-white flex gap-2 xl:w-max w-full py-2 px-2 rounded-md max-w-56">
+                        <input type="text" placeholder="Enter Your Email" className="focus:outline-none w-2/3" />
+                        <button className="ml-auto"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.91199 11.9998H3.99999L2.02299 4.1348C2.01033 4.0891 2.00262 4.04216 1.99999 3.9948C1.97799 3.2738 2.77199 2.7738 3.45999 3.1038L22 11.9998L3.45999 20.8958C2.77999 21.2228 1.99599 20.7368 1.99999 20.0288C2.00201 19.9655 2.01313 19.9029 2.03299 19.8428L3.49999 14.9998" stroke="#FAFAFA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         </button>
                     </form>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="hidden flex-col gap-4 lg:flex">
                     <h2 className="text-xl font-medium">Support</h2>
                     <p>111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
                     <p>exclusive@gmail.com</p>

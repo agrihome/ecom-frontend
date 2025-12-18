@@ -7,9 +7,9 @@ import {products} from "@/data/products";
 export default function ThisMonth() {
   return (
     <section className="mt-24 overflow-hidden">
-      <div className="flex flex-col px-20">
+      <div className="flex flex-col sm:px-20 px-5">
         <SectionTitle>This Month</SectionTitle>
-        <div className="flex items-center justify-start gap-24  pt-4 pb-10">
+        <div className="flex items-center justify-start sm:gap-24  pt-4 pb-10">
           <SectionHeading>Best Selling Products</SectionHeading>
           <div className="flex gap-5 ml-auto">
             <ViewAllButton text="View all" variant="small" />
@@ -17,8 +17,8 @@ export default function ThisMonth() {
         </div>
       </div>
 
-      <div className="px-20 py-5 overflow-hidden p-5">
-        <div className="grid grid-cols-4 gap-6">
+      <div className="sm:px-20 px-5 py-5 overflow-hidden p-5">
+        <div className="grid gap-6 md:grid-cols-4 grid-cols-2">
          {
          products.slice(4,8).map((product,index) => (
           <ProductCardResponsive

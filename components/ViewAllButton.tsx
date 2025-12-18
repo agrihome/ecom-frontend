@@ -14,7 +14,7 @@ export default function ViewAllButton({
   const baseClasses =
     "text-white rounded-md transition duration-100 active:scale-95 hover:scale-105";
 
-  const variantClasses = variant === "large" ? "px-12 py-3" : "px-8 py-2";
+  const variantClasses = variant === "large" ? "lg:px-12 lg:py-3 px-8 py-2 xs:w-32" : "sm:px-8 sm:py-2 px-3 py-1";
 
   return (
     <button

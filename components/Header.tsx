@@ -1,30 +1,31 @@
 import Link from "next/link";
+import ResponsiveMenu from "@/components/ResponsiveMenu";
 
 export default function Header() {
   return (
-    <header className="w-full bg-white pt-10 pb-4 px-20">
+    <header className="w-full bg-white pt-10 pb-4 px-5 sm:px-20">
       <nav className="w-full">
-        <div className="flex items-center w-full gap-32">
+        <div className="flex items-center w-full [@media(min-width:1250px)]:gap-32">
           <div className="text-2xl font-bold">
             <Link href="/">Exclusive</Link>
           </div>
-          <div className="flex items-center space-x-6 text-gray-700">
-            <Link href="/" className="hover:text-gray-600">
+          <div className="flex items-center space-x-6 text-gray-700 [@media(max-width:1250px)]:ml-6">
+            <Link href="/" className="hover:text-gray-600 hidden sm:block">
               Home
             </Link>
-            <Link href="/contact" className="hover:text-gray-600">
+            <Link href="/contact" className="hover:text-gray-600 hidden md:block">
               Contact
             </Link>
-            <Link href="/about" className="hover:text-gray-600">
+            <Link href="/about" className="hover:text-gray-600 hidden md:block">
               About
             </Link>
-            <Link href="/signup" className="hover:text-gray-600">
+            <Link href="/signup" className="hover:text-gray-600 hidden sm:block">
               Signup
             </Link>
           </div>
 
           <div className="flex gap-5 items-center ml-auto">
-            <div className="bg-[#F5F5F5] h-[38px] w-[250px] outline-none flex items-center px-3 justify-between gap-1">
+            <div className="bg-[#F5F5F5] h-[38px] w-[250px] outline-none lg:flex items-center px-3 justify-between gap-1 hidden">
               <input
                 type="text"
                 className="h-[22px] text-sm outline-none flex-1"
@@ -46,7 +47,7 @@ export default function Header() {
               </svg>
             </div>
 
-            <Link href="/wishlist">
+            <Link href="/wishlist" className="hidden sm:block">
               <svg
                 width="32"
                 height="32"
@@ -63,6 +64,8 @@ export default function Header() {
                 />
               </svg>
             </Link>
+
+
             <Link href="/cart">
               <svg
                 width="32"
@@ -101,6 +104,12 @@ export default function Header() {
                 />
               </svg>
             </Link>
+
+            <div className="[@media(min-width:1250px)]:hidden">
+              <ResponsiveMenu></ResponsiveMenu>
+            </div>
+
+
           </div>
         </div>
       </nav>

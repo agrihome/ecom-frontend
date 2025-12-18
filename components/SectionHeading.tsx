@@ -3,6 +3,6 @@ interface SectionHeadingProps {
 }
 
 export function SectionHeading({ children }: SectionHeadingProps) {
-  return <div className="text-4xl font-semibold">{children}</div>;
+  return <div className="sm:text-2xl lg:text-4xl font-semibold">{children}</div>;
 }
 

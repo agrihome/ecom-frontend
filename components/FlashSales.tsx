@@ -9,20 +9,24 @@ import { products } from "@/data/products";
 export default function FlashSales() {
   return (
     <section className="mt-24 overflow-hidden">
-      <div className="flex flex-col gap-8 px-20">
+      <div className="flex flex-col gap-8 px-5 sm:px-20">
         <SectionTitle>Today's</SectionTitle>
-        <div className="flex items-center justify-start gap-24  py-2">
+
+        <div className="sm:flex sm:items-center sm:justify-between grid grid-cols-2 lg:justify-start lg:gap-24 gap-y-8  py-2 items-center">
           <SectionHeading>Flash Sales</SectionHeading>
-          <div className="flex justify-center">
+
+          <div className="flex justify-start row-start-2">
             <Timer />
           </div>
-          <div className="flex gap-5 ml-auto">
+
+          <div className="flex gap-5 lg:ml-auto justify-self-end">
             <svg
               width="46"
               height="46"
               viewBox="0 0 46 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 lg:w-12 lg:h-12"
             >
               <circle cx="23" cy="23" r="23" fill="#F5F5F5" />
               <path
@@ -39,6 +43,7 @@ export default function FlashSales() {
               viewBox="0 0 46 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 lg:w-12 lg:h-12"
             >
               <circle cx="23" cy="23" r="23" fill="#F5F5F5" />
               <path
@@ -51,9 +56,11 @@ export default function FlashSales() {
             </svg>
           </div>
         </div>
+
+
       </div>
 
-      <div className="pl-20 py-5 overflow-hidden">
+      <div className="pl-5 sm:pl-20 py-5 overflow-hidden">
         <div className="flex gap-5 overflow-x-scroll hide-scrollbar">
           {products.map((product) => (
             <ProductCard

@@ -9,17 +9,17 @@ import { products } from "@/data/products";
 export default function ExploreOurProducts() {
   return (
     <section className="mt-24">
-      <div className="flex flex-col px-20">
+      <div className="flex flex-col sm:px-20 px-5">
         <SectionTitle>Our Products</SectionTitle>
-        <div className="flex items-center justify-start gap-24  pt-4 pb-10">
+        <div className="flex items-center justify-start sm:gap-24  pt-4 pb-10">
           <SectionHeading>Explore our Products</SectionHeading>
           <div className="flex gap-5 ml-auto">
             <ViewAllButton text="View all" variant="small" />
           </div>
         </div>
       </div>
-      <div className="px-20 py-5 overflow-hidden p-5">
-        <div className="grid grid-cols-4 grid-rows-2 gap-6 gap-y-16">
+      <div className="sm:px-20 px-5 py-5 overflow-hidden p-5">
+        <div className="grid md:grid-cols-4 grid-cols-2 grid-rows-2 gap-6 gap-y-16">
           {products.slice(5,13).map((product) => (
             <ProductCardResponsive
               key={product.productName}

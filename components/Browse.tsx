@@ -1,7 +1,6 @@
 import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
 import Link from "next/link";
-import { Camera } from "lucide-react";
 
 
 interface Category {
@@ -17,7 +16,7 @@ function CategoryBox({ name, svg, link   }: Category) {
         <div className="w-[30%] h-auto aspect-square flex justify-center items-center">
             {svg}
         </div>
-        <span>{name}</span>
+        <span className="text-sm lg:text-base">{name}</span>
     </Link>
 }
 
@@ -134,13 +133,13 @@ const Categories = [
 export default function Browse() {
 
 
-    return <section className="mx-20 mb-30 mt-20">
+    return <section className=" mx-5 sm:mx-20 mb-30 mt-20">
         <div className="flex flex-col gap-8">
             <SectionTitle>Categories</SectionTitle>
             <SectionHeading>Browse By Category</SectionHeading>
         </div>
 
-        <div className="mt-20 grid  grid-cols-[repeat(6,1fr)] justify-between gap-8">
+        <div className="mt-20 grid  md:grid-cols-[repeat(6,1fr)] grid-cols-[repeat(3,1fr)] justify-between lg:gap-8 gap-4 ">
                 {Categories.map((category, index) => (
                   <CategoryBox {...category} key={index} />
                 ))}
