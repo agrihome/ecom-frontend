@@ -10,6 +10,7 @@ export default function Header() {
   const dispatch = useAppDispatch();
   const { totalItems } = useAppSelector((state) => state.cart);
   const wishlistItems = useAppSelector((state) => state.wishlist.items);
+  const { isAuthenticated } = useAppSelector((state) => state.auth);
 
   return (
     <header className="w-full bg-white pt-10 pb-4 px-5 sm:px-20 border-gray-200 border-b">
@@ -28,9 +29,11 @@ export default function Header() {
             <Link href="/about" className="hover:text-gray-600 hidden md:block">
               About
             </Link>
-            <Link href="/login" className="hover:text-gray-600 hidden sm:block">
-              Login
-            </Link>
+            {!isAuthenticated && (
+              <Link href="/login" className="hover:text-gray-600 hidden sm:block">
+                Login
+              </Link>
+            )}
           </div>
 
           <div className="flex gap-5 items-center ml-auto">
