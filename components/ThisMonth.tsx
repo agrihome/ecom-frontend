@@ -22,7 +22,8 @@ export default function ThisMonth() {
          {
          products.slice(4,8).map((product,index) => (
           <ProductCardResponsive
-            key={index}
+            key={product.id}
+            id={product.id}
             productName={product.productName}
             rating={product.rating}
             imgUrl={product.imgUrl}

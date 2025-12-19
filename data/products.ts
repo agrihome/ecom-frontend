@@ -16,19 +16,20 @@ import benz from "@/public/images/benz.png"
 import gaming2 from "@/public/images/gaming2.png"
 
 interface Product {
+  id: string; // Added ID
   productName: string;
   rating: number;
-  imgUrl: string | any; // Can be string URL or imported image
+  imgUrl: string | any;
   currentPrice: number;
   originalPrice: number;
-  reviewCount?: number; // Optional review count
-  discountPercent?: number; // Optional discount percentage
-  new?: boolean; // Optional new badge
+  reviewCount?: number;
+  discountPercent?: number;
+  new?: boolean;
 }
 
 export const products: Product[] = [
-
     {
+        id: "havit-hv-g92-gamepad",
         productName: "HAVIT HV-G92 Gamepad",
         rating: 5,
         imgUrl: gaming,
@@ -39,6 +40,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "ak-900-wired-keyboard",
         productName: "AK-900 Wired Keyboard",
         rating: 4,
         imgUrl: keyboard,
@@ -49,6 +51,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "ips-lcd-gaming-monitor",
         productName: "IPS LCD Gaming Monitor",
         rating: 5,
         imgUrl: monitor,
@@ -59,6 +62,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "s-series-comfort-chair",
         productName: "S-Series Comfort Chair",
         rating: 4.5,
         imgUrl: chair,
@@ -69,6 +73,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "the-north-coat",
         productName: "The north coat",
         rating: 5,
         imgUrl: jacketPink,
@@ -79,6 +84,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "gucci-duffle-bag",
         productName: "Gucci duffle bag",
         rating: 4.5,
         imgUrl: handbagModern,
@@ -89,6 +95,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "rgb-liquid-cpu-cooler",
         productName: "RGB liquid CPU Cooler",
         rating: 4.5,
         imgUrl: rgbSpeaker,
@@ -99,6 +106,7 @@ export const products: Product[] = [
         new: false
     },
      {
+        id: "small-bookshelf",
         productName: "Small BookSelf",
         rating: 5,
         imgUrl: bookShelf,
@@ -109,6 +117,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "canon-eos-dslr-camera",
         productName: "CANON EOS DSLR Camera",
         rating: 4,
         imgUrl: camera,
@@ -119,6 +128,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "asus-fhd-gaming-laptop",
         productName: "ASUS FHD Gaming Laptop",
         rating: 5,
         imgUrl: laptop,
@@ -129,6 +139,7 @@ export const products: Product[] = [
         new: false
     },
     {
+        id: "kids-electric-car",
         productName: "Kids Electric Car",
         rating: 5,
         imgUrl: benz,
@@ -139,6 +150,7 @@ export const products: Product[] = [
         new: true  
     },
     {
+        id: "jr-zoom-soccer-cleats",
         productName: "Jr. Zoom Soccer Cleats",
         rating: 4.5,
         imgUrl: shoes,
@@ -149,6 +161,7 @@ export const products: Product[] = [
         new: false
     },
      {
+        id: "quilted-satin-jacket",
         productName: "Quilted Satin Jacket",
         rating: 4.5,
         imgUrl: jacketGreen,

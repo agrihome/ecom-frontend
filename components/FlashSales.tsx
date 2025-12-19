@@ -64,7 +64,8 @@ export default function FlashSales() {
         <div className="flex gap-5 overflow-x-scroll hide-scrollbar">
           {products.map((product) => (
             <ProductCard
-              key={product.productName}
+              key={product.id}
+              id={product.id}
               productName={product.productName}
               rating={product.rating}
               imgUrl={product.imgUrl}

@@ -22,7 +22,8 @@ export default function ExploreOurProducts() {
         <div className="grid md:grid-cols-4 grid-cols-2 grid-rows-2 gap-6 gap-y-16">
           {products.slice(5,13).map((product) => (
             <ProductCardResponsive
-              key={product.productName}
+              key={product.id}
+              id={product.id}
               productName={product.productName}
               rating={product.rating}
               imgUrl={product.imgUrl}
