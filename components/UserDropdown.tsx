@@ -40,13 +40,13 @@ export default function UserDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-8 h-8 rounded-full bg-[#DB4444] text-white transition-all hover:bg-opacity-90"
+        className={`flex items-center justify-center w-8 h-8 rounded-full transition-all ${isOpen ? "bg-[#DB4444]" : "hover:bg-gray-100"}`}
       >
-        <UserIcon color="white" size={24} />
+        <UserIcon color={isOpen ? "white" : "black"} size={24} />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-56 bg-black/90 backdrop-blur-md rounded border border-white/20 shadow-lg py-4 z-50 text-white flex flex-col gap-2">
+        <div className="absolute right-0 top-full mt-2 w-56 bg-black/80 backdrop-blur-md rounded border border-white/20 shadow-lg py-4 z-50 text-white flex flex-col gap-2">
            <div className="px-4 py-2 border-b border-white/10">
               <p className="text-sm font-medium truncate">{user?.name || "User"}</p>
               <p className="text-xs text-gray-300 truncate">{user?.email}</p>
