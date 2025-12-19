@@ -75,7 +75,7 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-2">
-              <Link href="/" className="border-b border-white">
+              <Link href="/products" className="border-b border-white">
                 Shop Now
               </Link>
               <svg
