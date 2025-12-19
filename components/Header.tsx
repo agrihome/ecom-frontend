@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import ResponsiveMenu from "@/components/ResponsiveMenu";
 import UserDropdown from "@/components/UserDropdown";
+import { useAppSelector } from "@/lib/redux/hooks";
 
 export default function Header() {
+  const { totalItems } = useAppSelector((state) => state.cart);
+  const wishlistItems = useAppSelector((state) => state.wishlist.items);
+
   return (
     <header className="w-full bg-white pt-10 pb-4 px-5 sm:px-20 border-gray-200 border-b">
       <nav className="w-full">
@@ -20,8 +26,8 @@ export default function Header() {
             <Link href="/about" className="hover:text-gray-600 hidden md:block">
               About
             </Link>
-            <Link href="/signup" className="hover:text-gray-600 hidden sm:block">
-              Signup
+            <Link href="/login" className="hover:text-gray-600 hidden sm:block">
+              Login
             </Link>
           </div>
 
@@ -48,7 +54,7 @@ export default function Header() {
               </svg>
             </div>
 
-            <Link href="/wishlist" className="hidden sm:block">
+            <Link href="/wishlist" className="hidden sm:block relative">
               <svg
                 width="32"
                 height="32"
@@ -64,10 +70,15 @@ export default function Header() {
                   strokeLinejoin="round"
                 />
               </svg>
+              {wishlistItems.length > 0 && (
+                <span className="absolute top-0 right-0 bg-[#DB4444] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+                  {wishlistItems.length}
+                </span>
+              )}
             </Link>
 
 
-            <Link href="/cart">
+            <Link href="/cart" className="relative">
               <svg
                 width="32"
                 height="32"
@@ -104,6 +115,11 @@ export default function Header() {
                   strokeLinejoin="round"
                 />
               </svg>
+              {totalItems > 0 && (
+                <span className="absolute top-0 right-0 bg-[#DB4444] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Link>
 
             <UserDropdown />

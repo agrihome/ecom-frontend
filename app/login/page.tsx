@@ -37,7 +37,7 @@ export default function Login() {
     };
 
     return (
-        <div className="grid lg:grid-cols-[50%_50%] 2xl:grid-cols-[60%_40%]  my-12 overflow-hidden w-full h-[600px] min-h-max mb-20 items-center">
+        <div className="grid lg:grid-cols-[50%_50%] 2xl:grid-cols-[60%_40%]  lg:my-12 my-6 overflow-hidden w-full h-[600px] min-h-max mb-20 items-center">
             <div className="h-full relative hidden lg:block">
                  <Image 
                     src={login} 
@@ -45,13 +45,13 @@ export default function Login() {
                     className="object-cover object-center w-full h-full"
                  />
             </div>
-            <div className="flex flex-col justify-center px-5 sm:px-12 sm:pr-24 gap-10 justify-self-center w-full">
-                <div className="flex flex-col gap-2">
+            <div className="flex flex-col justify-center items-center px-5 sm:px-12 gap-10 justify-self-center place-self-center w-full">
+                <div className="flex flex-col gap-2 w-full max-w-[400px]">
                     <h1 className="sm:text-4xl text-2xl font-medium tracking-wide">Log in to Exclusive</h1>
                     <p className="text-base text-gray-600">Enter your details below</p>
                 </div>
                 
-                <form onSubmit={handleLogin} className="flex flex-col gap-8 w-full">
+                <form onSubmit={handleLogin} className="flex flex-col gap-8 w-full max-w-[400px]">
                     <div className="flex flex-col gap-8">
                         <LoginInput 
                             placeholder="Email or Phone Number" 
@@ -77,6 +77,13 @@ export default function Login() {
                         </button>
                         <Link href="/forgot-password" className="text-[#DB4444] hover:opacity-80 transition-colors">
                             Forget Password?
+                        </Link>
+                    </div>
+
+                    <div className="flex gap-4 items-center justify-center text-gray-600">
+                        <p>New to Exclusive?</p>
+                        <Link href="/signup" className="font-medium text-black border-b border-black pb-0.5 hover:opacity-70">
+                            Create account
                         </Link>
                     </div>
                 </form>
