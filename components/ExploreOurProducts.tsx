@@ -1,12 +1,15 @@
+"use client";
+
 import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
 import { Timer } from "./Timer";
 import ProductCardResponsive from "@/components/ProductCardResponsive";
 import img from "@/public/images/gaming.png";
 import ViewAllButton from "./ViewAllButton";
-import { products } from "@/data/products";
+import { useAppSelector } from "@/lib/redux/hooks";
 
 export default function ExploreOurProducts() {
+  const products = useAppSelector((state) => state.products.filteredItems);
   return (
     <section className="mt-24">
       <div className="flex flex-col sm:px-20 px-5">

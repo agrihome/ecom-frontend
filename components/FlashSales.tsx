@@ -1,12 +1,15 @@
+"use client";
+
 import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
 import { Timer } from "./Timer";
 import ProductCard from "@/components/ProductCard";
 import img from "@/public/images/gaming.png";
 import ViewAllButton from "./ViewAllButton";
-import { products } from "@/data/products";
+import { useAppSelector } from "@/lib/redux/hooks";
 
 export default function FlashSales() {
+  const products = useAppSelector((state) => state.products.filteredItems);
   return (
     <section className="mt-24 overflow-hidden">
       <div className="flex flex-col gap-8 px-5 sm:px-20">

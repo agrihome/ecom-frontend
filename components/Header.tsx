@@ -3,9 +3,11 @@
 import Link from "next/link";
 import ResponsiveMenu from "@/components/ResponsiveMenu";
 import UserDropdown from "@/components/UserDropdown";
-import { useAppSelector } from "@/lib/redux/hooks";
+import { useAppSelector, useAppDispatch } from "@/lib/redux/hooks";
+import { searchProducts } from "@/lib/redux/features/productSlice";
 
 export default function Header() {
+  const dispatch = useAppDispatch();
   const { totalItems } = useAppSelector((state) => state.cart);
   const wishlistItems = useAppSelector((state) => state.wishlist.items);
 
@@ -37,6 +39,7 @@ export default function Header() {
                 type="text"
                 className="h-[22px] text-sm outline-none flex-1 placeholder:text-gray-500 text-gray-700"
                 placeholder="What are you looking for?"
+                onChange={(e) => dispatch(searchProducts(e.target.value))}
               />
               <svg
                 width="18"

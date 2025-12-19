@@ -1,10 +1,13 @@
+"use client";
+
 import { SectionTitle } from "./SectionTitle";
 import { SectionHeading } from "./SectionHeading";
 import ProductCardResponsive from "@/components/ProductCardResponsive";
 import ViewAllButton from "./ViewAllButton";
-import {products} from "@/data/products";
+import { useAppSelector } from "@/lib/redux/hooks";
 
 export default function ThisMonth() {
+  const products = useAppSelector((state) => state.products.filteredItems);
   return (
     <section className="mt-24 overflow-hidden">
       <div className="flex flex-col sm:px-20 px-5">

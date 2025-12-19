@@ -74,8 +74,8 @@ export default function ResponsiveMenu() {
                     </li>
                   
                     <li className="py-2">
-                    <Link href="/signup">
-                        Signup
+                    <Link href="/login">
+                        Login
                     </Link>
 
                     </li>  
