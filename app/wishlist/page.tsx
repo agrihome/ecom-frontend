@@ -4,9 +4,12 @@ import React from "react";
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 import { addToCart } from "@/lib/redux/features/cartSlice";
+import { clearWishlist } from "@/lib/redux/features/wishlistSlice";
 import ProductCardResponsive from "@/components/ProductCardResponsive";
+import { useRouter } from "next/navigation";
 
 export default function WishlistPage() {
+  const router = useRouter();
   const wishlistIds = useAppSelector((state) => state.wishlist.items.map(item => item.id));
   const allProducts = useAppSelector((state) => state.products.items);
   const dispatch = useAppDispatch();
@@ -27,6 +30,8 @@ export default function WishlistPage() {
             image: typeof product.imgUrl === 'string' ? product.imgUrl : product.imgUrl?.src || product.imgUrl
         }));
     });
+    dispatch(clearWishlist());
+    router.push("/cart");
   };
 
   return (
