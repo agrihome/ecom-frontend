@@ -24,8 +24,8 @@ export default function Login() {
         setTimeout(() => {
             // Always succeed with dummy user as requested
             const dummyUser = {
-                name: "Dummy User",
-                email: email || "dummy@example.com",
+                name: "john",
+                email: email || "john@example.com",
                 token: "dummy-token-123456"
             };
 

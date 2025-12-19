@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ResponsiveMenu from "@/components/ResponsiveMenu";
+import UserDropdown from "@/components/UserDropdown";
 
 export default function Header() {
   return (
@@ -25,7 +26,7 @@ export default function Header() {
           </div>
 
           <div className="flex gap-5 items-center ml-auto">
-            <div className="bg-[#F5F5F5] h-[38px] w-[250px] outline-none lg:flex items-center px-3 justify-between gap-1 hidden">
+            <div className="bg-[#F5F5F5] h-[38px] w-[250px] outline-none [@media(min-width:1080px)]:flex items-center px-3 justify-between gap-1 hidden">
               <input
                 type="text"
                 className="h-[22px] text-sm outline-none flex-1 placeholder:text-gray-500 text-gray-700"
@@ -104,6 +105,8 @@ export default function Header() {
                 />
               </svg>
             </Link>
+
+            <UserDropdown />
 
             <div className="[@media(min-width:1250px)]:hidden">
               <ResponsiveMenu></ResponsiveMenu>
