@@ -2,6 +2,7 @@
 
 import StarRating from "./StarRating";
 import Image from "next/image";
+import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 import { addToCart } from "@/lib/redux/features/cartSlice";
 import { addToWishlist, removeFromWishlist } from "@/lib/redux/features/wishlistSlice";
@@ -62,11 +63,13 @@ export default function ProductCard({
   return (
     <div className="relative w-max group">
       <div className="bg-[#F5F5F5] w-[180px] h-[166px] lg:w-[270px] lg:h-[250px] flex items-center justify-center rounded-md relative overflow-hidden">
-        <Image
-          src={imgUrl}
-          alt={productName}
-          className="object-cover lg:w-[172px] w-[114px] h-auto"
-        />
+        <Link href={`/product/${id}`} className="w-full h-full flex items-center justify-center">
+          <Image
+            src={imgUrl}
+            alt={productName}
+            className="object-cover lg:w-[172px] w-[114px] h-auto"
+          />
+        </Link>
         
         <button 
           onClick={handleAddToCart}
@@ -76,8 +79,8 @@ export default function ProductCard({
         </button>
       </div>
 
-      <div className="flex flex-col gap-1 mt-4">
-        <p className="font-medium">{productName}</p>
+      <Link href={`/product/${id}`} className="flex flex-col gap-1 mt-4">
+        <p className="font-medium hover:text-[#DB4444] transition-colors">{productName}</p>
         <p className="flex gap-3 font-medium">
           <span className="text-[#DB4444]">${currentPrice}</span>
           <span className="line-through text-[#7D8184]">${originalPrice}</span>
@@ -89,7 +92,7 @@ export default function ProductCard({
             <span className="text-[#7D8184] font-medium text-sm">({reviewCount})</span>
           )}
         </div>
-      </div>
+      </Link>
 
       {isNew ? (
         <span className="w-[56px] flex h-[26px] absolute top-4 left-4 items-center justify-center bg-[#00FF66] rounded-md text-white text-[12px]">

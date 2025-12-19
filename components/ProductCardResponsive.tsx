@@ -2,6 +2,7 @@
 
 import StarRating from "./StarRating";
 import Image from "next/image";
+import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 import { addToCart } from "@/lib/redux/features/cartSlice";
 import { addToWishlist, removeFromWishlist } from "@/lib/redux/features/wishlistSlice";
@@ -62,11 +63,13 @@ export default function ProductCardResponsive({
   return (
     <div className="relative w-full group">
       <div className="bg-[#F5F5F5] w-full aspect-[1.08] flex items-center justify-center rounded-md relative overflow-hidden">
-        <Image
-          src={imgUrl}
-          alt={productName}
-          className="object-cover w-[63.7%] h-auto"
-        />
+        <Link href={`/product/${id}`} className="w-full h-full flex items-center justify-center">
+          <Image
+            src={imgUrl}
+            alt={productName}
+            className="object-cover w-[63.7%] h-auto"
+          />
+        </Link>
         <button 
           onClick={handleAddToCart}
           className={`w-full text-white text-center py-2 absolute bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-md ${isInCart ? "bg-green-600" : "bg-black"}`}
@@ -74,8 +77,8 @@ export default function ProductCardResponsive({
           {isInCart ? "Add More" : "Add To Cart"}
         </button>
       </div>
-      <div className="flex flex-col gap-1 mt-4">
-        <p className="font-medium text-sm sm:text-base truncate">{productName}</p>
+      <Link href={`/product/${id}`} className="flex flex-col gap-1 mt-4">
+        <p className="font-medium text-sm sm:text-base truncate hover:text-[#DB4444] transition-colors">{productName}</p>
         <p className="flex gap-3 font-medium text-sm sm:text-base">
           <span className="text-[#DB4444]">${currentPrice}</span>
           <span className="line-through text-[#7D8184]">${originalPrice}</span>
@@ -87,7 +90,7 @@ export default function ProductCardResponsive({
             <span className="text-[#7D8184] font-medium text-xs sm:text-sm">({reviewCount})</span>
           )}
         </div>
-      </div>
+      </Link>
 
       {isNew ? (
         <span className="w-[45px] sm:w-[56px] flex h-[22px] sm:h-[26px] absolute top-4 left-4 items-center justify-center bg-[#00FF66] rounded-md text-white text-[10px] sm:text-[12px]">
