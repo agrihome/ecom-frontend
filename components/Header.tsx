@@ -3,7 +3,7 @@ import ResponsiveMenu from "@/components/ResponsiveMenu";
 
 export default function Header() {
   return (
-    <header className="w-full bg-white pt-10 pb-4 px-5 sm:px-20">
+    <header className="w-full bg-white pt-10 pb-4 px-5 sm:px-20 border-gray-200 border-b">
       <nav className="w-full">
         <div className="flex items-center w-full [@media(min-width:1250px)]:gap-32">
           <div className="text-2xl font-bold text-black">

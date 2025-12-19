@@ -50,7 +50,7 @@ export function HeroCategoryToggle() {
 
 export default function Hero() {
   return (
-    <section className="flex px-5 sm:px-20 w-full justify-between border-gray-200 border-t text-white items-start">
+    <section className="flex px-5 sm:px-20 w-full justify-between text-white items-start">
      <div className="[@media(max-width:1250px)]:hidden border-r border-gray-200 py-5">
      <HeroCategoryToggle></HeroCategoryToggle>
      </div>
