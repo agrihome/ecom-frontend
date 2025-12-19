@@ -31,7 +31,10 @@ export default function ProductCardResponsive({
 }: ProductCardResponsiveProps) {
   const dispatch = useAppDispatch();
   const wishlistItems = useAppSelector((state) => state.wishlist.items);
+  const cartItems = useAppSelector((state) => state.cart.items);
+
   const isInWishlist = wishlistItems.some((item) => item.id === id);
+  const isInCart = cartItems.some((item) => item.id === id);
 
   const handleAddToCart = () => {
     dispatch(addToCart({
@@ -66,9 +69,9 @@ export default function ProductCardResponsive({
         />
         <button 
           onClick={handleAddToCart}
-          className="w-full bg-black text-white text-center py-2 absolute bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-md"
+          className={`w-full text-white text-center py-2 absolute bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-md ${isInCart ? "bg-green-600" : "bg-black"}`}
         >
-          Add To Cart
+          {isInCart ? "Add More" : "Add To Cart"}
         </button>
       </div>
       <div className="flex flex-col gap-1 mt-4">
